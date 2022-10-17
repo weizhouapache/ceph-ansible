@@ -1,0 +1,7 @@
+127.0.0.1 localhost
+
+# ceph nodes
+10.0.33.31  ceph11
+10.0.34.155 ceph12
+10.0.34.14  ceph13
+
