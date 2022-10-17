@@ -1,0 +1,44 @@
+ansible_user: root
+ansible_ssh_pass: password
+no_log: false
+
+cluster: ceph
+configure_firewall: False
+ceph_origin: repository
+ceph_repository: community
+ceph_stable_release: quincy
+#ceph_mirror: http://eu.ceph.com
+#ceph_stable_key: http://eu.ceph.com/keys/release.asc
+#ceph_stable_repo: "{{ ceph_mirror }}/debian-{{ ceph_stable_release }}"
+#ceph_stable_distro_source: focal
+ceph_mirror: http://bg.archive.ubuntu.com/ubuntu/
+ceph_stable_repo: "http://bg.archive.ubuntu.com/ubuntu"
+ceph_stable_distro_source: jammy-updates
+public_network: "fc00:1234::/64"
+cluster_network: "fc00:1234::/64"
+monitor_interface: eth0
+ip_version: ipv6
+
+ceph_conf_key_directory: /etc/ceph
+# Permissions for keyring files in /etc/ceph
+ceph_keyring_permissions: '0600'
+cephx: true
+
+devices:
+  - '/dev/sdb'
+ceph_conf_overrides:
+   mon:
+     mon_allow_pool_delete: true
+
+dashboard_enabled: False
+dashboard_protocol: http
+dashboard_port: 8443
+dashboard_admin_user: admin
+dashboard_admin_password: password
+grafana_admin_user: admin
+grafana_admin_password: admin
+grafana_uid: 472
+grafana_datasource: Dashboard
+grafana_dashboard_version: quincy
+grafana_port: 3000
+grafana_allow_embedding: False
