@@ -1,12 +1,12 @@
 [mons]
-mon1
-mon2
-mon3
+ceph1
+ceph2
+ceph3
 
 [mgrs]
-mon1
-mon2
-mon3
+ceph1
+ceph2
+ceph3
 
 [osds]
 ceph1
@@ -14,9 +14,9 @@ ceph2
 ceph3
 
 [monitoring]
-mon1
-mon2
-mon3
+ceph1
+ceph2
+ceph3
 
 [clients]
-mon1
+ceph1
